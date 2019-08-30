@@ -1,0 +1,24 @@
+service: 
+  name: sar-layer-example-stack
+provider:
+  name: aws
+  runtime: python3.7
+  stage: dev
+  timeout: 30
+  region: us-east-1
+functions:
+  hello:
+    handler: code/hello.lambda_handler
+    layers:
+      - !GetAtt RequirementsLayerApp.Outputs.LayerVersion
+    events:
+    - http:
+        path: /
+        method: get
+resources:
+    RequirementsLayerApp:
+      Type: AWS::Serverless::Application
+      Properties:
+        Location:
+          ApplicationId: arn:aws:serverlessrepo:us-east-1:721343429908:applications/requests-python-layer-app
+          SemanticVersion: 1.0.0
