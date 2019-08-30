@@ -2,7 +2,7 @@
 
 Example applying a lambda layer from a Serverless Application Registry App to a function in a Serverless Framework template.
 
-Attempting to implement as suggested by Jeremy Daly in [off-by-none]() following examples from https://serverless.pub/sar-layers/ and https://medium.com/theburningmonk-com/how-to-include-serverless-repository-apps-in-serverless-yml-6d8233c5d684
+Attempting to implement as suggested by Jeremy Daly in [off-by-none](https://www.jeremydaly.com/newsletter-issue-52/) following examples from https://serverless.pub/sar-layers/ and https://medium.com/theburningmonk-com/how-to-include-serverless-repository-apps-in-serverless-yml-6d8233c5d684
  
 The SAR application simply creates a lambda layer with the python requests library installed. 
 https://github.com/aaronosb/requests-lambda-layer-python-SAR
