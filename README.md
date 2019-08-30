@@ -28,9 +28,9 @@ def lambda_handler(event, context):
 ## HELP NEEDED
 
 ```
-  Error --------------------------------------------------
+  Serverless Error ---------------------------------------
  
-  Error: The CloudFormation template is invalid: Invalid template property or properties [RequirementsLayerApp]
+  An error occurred: sar-layer-example-stack-dev - Template error: resource RequirementsLayerApp does not support attribute type Outputs in Fn::GetAtt.
 ```
 
 It looks like the reference to `- !GetAtt RequirementsLayerApp.Outputs.LayerVersion` the outputs of the SAR App are not able to be referenced as part of the serverless framework template.

@@ -16,6 +16,8 @@ functions:
         path: /
         method: get
 resources:
+  Transform: AWS::Serverless-2016-10-31
+  Resources:
     RequirementsLayerApp:
       Type: AWS::Serverless::Application
       Properties:
